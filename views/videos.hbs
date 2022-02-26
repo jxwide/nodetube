@@ -1,0 +1,15 @@
+<div class="videos">
+    <p>{{ttt}}</p>
+    {{#each mainpagevideos}}
+        <a class="video" href="/videos/id/{{this._id}}">
+            <div class="preview">
+                <img class="preview_of_video" src="{{this.preview_url}}" alt="preview">
+            </div>
+            <div class="desc">
+                <p class="name_of_video">{{this.title}}</p>
+                <p class="name_of_channel">{{this.channel}}</p>
+                <p class="views_of_video">{{this.views}} views</p>
+            </div>
+        </a>
+    {{/each}}
+</div>

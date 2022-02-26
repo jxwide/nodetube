@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/media-index.css">
+</head>
+
+<div class="videopage">
+    <div class="mainplayer">
+        <iframe width="880" height="495" src="{{video_src}}" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="underplayerinfo">
+        <div>
+            <p class="title_under_video">{{video_title}}</p>
+            <p class="views_under_video">{{video_views}} просмотров</p>
+        </div>
+        <div>
+            <!--<img class="likeimg" src="/svgs/like_white.svg" alt="" width="30px" height="30px">-->
+        </div>
+    </div>
+</div>
+
+<script>
+    let like = false;
+    let likeimg = document.querySelector('.likeimg');
+    likeimg.onclick = () => {
+        if (!like) {
+            likeimg.src = '/svgs/like_red.svg';
+            like = true
+        } else {
+            likeimg.src = '/svgs/like_white.svg';
+            like = false
+        }
+    }
+</script>
